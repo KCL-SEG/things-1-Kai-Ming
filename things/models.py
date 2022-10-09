@@ -10,5 +10,5 @@ class Thing:
     def __del__(self):
         print('A thing was deleted')
 
-    def clean_up(self):
+    def full_clean(self):
         del(self)
