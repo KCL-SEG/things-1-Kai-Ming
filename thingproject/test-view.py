@@ -7,6 +7,7 @@ class ViewTest(TestCase):
     def test_URL(self):
         response = self.client.get('/')
         self.assertEqual(response.status_code, 200, "It  was not possible to reach the required URL.")
+        print(response.status_code)
 
     def test_content(self):
         response = self.client.get('/')
