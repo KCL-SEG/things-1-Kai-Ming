@@ -5,7 +5,6 @@ from django.http import HttpResponse
 # Create your views here.
 
 def home(request):
-    response = HttpResponse('<html>Things</html>')
-    html = response.content.decode('utf8')
-    return html
-    #return render(request, 'home.html')
+    #response = HttpResponse('<html>Things</html>')
+    #return response
+    return render(request, 'templates/home.html')
