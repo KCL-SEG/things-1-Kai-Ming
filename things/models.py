@@ -1,12 +1,12 @@
 from django.db import models
 
 # Create your models here.
-class Thing():
-    name = models.CharField(max_length=100)
-    description = models.TextField()
-    quantity = models.IntegerField()
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+class Thing:
+    def __init__(self, name, description, quantity):
+        self.name = name
+        self.description = description
+        self.quantity = quantity
 
+    
     def __str__(self):
         return self.name
