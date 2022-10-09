@@ -6,5 +6,6 @@ from django.http import HttpResponse
 
 def home(request):
     response = HttpResponse('<html>Things</html>')
-    return response
+    html = response.content.decode('utf8')
+    return html
     #return render(request, 'home.html')
