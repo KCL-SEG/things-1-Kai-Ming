@@ -7,6 +7,8 @@ class Thing:
         self.description = description
         self.quantity = quantity
 
-    
-    def __str__(self):
-        return self.name
+    def __del__(self):
+        print('A thing was deleted')
+
+    def clean_up(self):
+        del(self)
