@@ -10,6 +10,5 @@ class ViewTest(TestCase):
 
     def test_content(self):
         response = self.client.get('/')
-        print(response.content)
         self.assertContains(response, '<title>Things</title>', html=True)
         self.assertContains(response, '<h1>Things</h1>', html=True)
