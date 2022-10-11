@@ -1,5 +1,3 @@
-from enum import unique
-from pickle import FALSE
 from django.db import models
 from django.core.validators import MinLengthValidator
 from django.core.validators import MaxLengthValidator
@@ -18,6 +16,7 @@ class Thing(models.Model):
         unique = False,
     )
     quantity = models.IntegerField(
+        unique = False,
         validators = [
             MinLengthValidator(0),
             MaxLengthValidator(100),
