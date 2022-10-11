@@ -13,14 +13,14 @@ class Thing(models.Model):
     description = models.CharField(
         max_length=120,
         blank = True,
-        
+
         unique = False,
     )
     quantity = models.IntegerField(
         unique = False,
         validators = [
-            MinLengthValidator(0),
             MaxLengthValidator(100),
+            MinLengthValidator(0),
         ]
 
     )       
