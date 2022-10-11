@@ -1,6 +1,8 @@
 from enum import unique
 from pickle import FALSE
 from django.db import models
+from django.core.validators import MinLengthValidator
+from django.core.validators import MaxLengthValidator
 
 # Create your models here.
 
@@ -16,7 +18,9 @@ class Thing(models.Model):
         unique = False,
     )
     quantity = models.IntegerField(
-        min_value=0,
-        max_value=100,
+        validators = [
+            MinLengthValidator(min_value=0),
+            MaxLengthValidator(max_value=100),
+        ]
 
     )       
